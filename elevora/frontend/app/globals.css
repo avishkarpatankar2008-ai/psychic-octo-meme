@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+@layer base {
+  html { @apply scroll-smooth bg-[#070812]; }
+  body { @apply bg-[#070812] text-white antialiased; }
+  ::selection { background: rgba(124,92,255,.35); color: white; }
+  :focus-visible { outline: 2px solid #8b7cff; outline-offset: 3px; }
+}
+
+@layer components {
+  .glass { @apply border border-white/[0.08] bg-white/[0.035] backdrop-blur-xl; }
+  .glass-strong { @apply border border-white/[0.11] bg-white/[0.055] backdrop-blur-2xl; }
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-violet-300/80; }
+  .muted { @apply text-white/55; }
+  .grid-bg {
+    background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+  .glow { box-shadow: 0 0 80px rgba(111,83,255,.16); }
+}
